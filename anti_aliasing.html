@@ -22,7 +22,13 @@ Use the output to generate a 15.258 kHz signal.
 <br>
 My acquired signal should be DC.
 <br>
-Result:
+Result: It seems to vary randomly between a 5 discrete levels. With the 14 bit ADC representing -1V to 1V, each level represents 2V/2^14 = 122uV. 
+<br>
+Interestingly, you would expect it to be DC, but with its value fixed by the phase of the incoming signal. Thus, different acquisitions would have different DC values.
+<br>
+However, I plotted it for a few different acquisitions and it was roughly the same (about 0) every time. Seems to suggest some filtering may be happening. 
+<br>
+<img src="15kHzrp.png" height='555' width='500'>
 <br>
 </p>
 <h2>
@@ -56,6 +62,7 @@ Actual result:
 <img src="16kHzrp.png" height="555" width="500">
 <br>
 As you can see, the aliased signal is clearly there, but attentuated by a factor of 200.
+Seems like the Red Pitaya built-in acquisition program does some filtering. 
 </p>
 
 
