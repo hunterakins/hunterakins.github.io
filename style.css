@@ -9,12 +9,13 @@ h1 {
 }
 
 p {
+	font-size:150%;
 	color: navy;
 	font-family: "Courier", Courier, Monospace;
 }
 
 a {
-	
+	font-size:150%;
 	font-family: "Courier", Courier, Monospace;
 }
 
